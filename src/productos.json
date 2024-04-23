@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "title": "hola",
+    "description": "asdqwaqsd",
+    "code": "ppi",
+    "price": 150,
+    "status": true,
+    "stock": 12,
+    "category": "buena",
+    "thumbnails": []
+  }
+]
