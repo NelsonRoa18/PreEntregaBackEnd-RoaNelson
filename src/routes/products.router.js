@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const fs = require("fs").promises
 
-const file = "productos.json"
+const file = './data/productos.json'
 
 
 router.get("/products", async (req, res) => {
@@ -24,7 +24,7 @@ router.get("/products", async (req, res) => {
 
     } catch (error) {
         console.error('Error:', error);
-        res.status(500).json({ error: "Hubo un error al agregar el producto" });
+        res.status(500).json({ error: "Hubo un error al solicitar el producto" });
     }
 
 })
@@ -42,7 +42,7 @@ router.get("/products/:id", async (req, res) => {
 
     } catch (error) {
         console.error('Error:', error);
-        res.status(500).json({ error: "Hubo un error al agregar el producto" });
+        res.status(500).json({ error: "Hubo un error al mostrar el producto" });
     }
 
 
@@ -99,7 +99,7 @@ router.put("/products/:id", async (req, res) => {
 
     } catch (error) {
         console.error('Error:', error);
-        res.status(500).json({ error: "Hubo un error al agregar el producto" });
+        res.status(500).json({ error: "Hubo un error al modificar el producto" });
     }
 })
 
@@ -123,7 +123,8 @@ router.delete("/products/:id", async(req, res) => {
         res.json({message : "Producto eliminado correctamente"})
 
     } catch (error) {
-        
+        console.error('Error:', error);
+        res.status(500).json({ error: "Hubo un error al eliminar el producto" });
     }
 })
 

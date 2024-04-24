@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const fs = require('fs').promises
 
-const file = "carrito.json"
+const file = './data/carrito.json'
 
 router.get("/carts/:id", async (req, res) => {
     const data = await fs.readFile(file, "utf-8")

@@ -1,0 +1,13 @@
+[
+  {
+    "id": 2,
+    "title": "Manteca",
+    "description": "Altos porcentajes de grasa",
+    "code": "1254",
+    "price": 250,
+    "status": true,
+    "stock": 25,
+    "category": "Lacteos",
+    "thumbnails": []
+  }
+]
